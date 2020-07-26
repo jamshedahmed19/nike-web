@@ -1,16 +1,16 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Outlet, useParams, Link } from "react-router-dom";
 import "../Assets/Style.css";
 
-function Men() {
+function Women() {
   return (
     <>
       <br />
       <Grid container spacing={0}>
         <Grid item xs={1} />
         <Grid item xs={10}>
-          <h1>Men</h1>
+          <h1>Women</h1>
         </Grid>
         <Grid item xs={1} />
         <Grid item xs={1} />
@@ -24,15 +24,15 @@ function Men() {
   );
 }
 
-export default Men;
+export default Women;
 
-export function LaunchIndex() {
+export function WomenShoe() {
   return (
     <div className="cards-list">
-      {Object.entries(men).map(([slug, { name, img, price }]) => (
+      {Object.entries(women).map(([slug, { name, img, price }]) => (
         <Grid item xs={4}>
           <div className="card" key={slug}>
-            <Link to={`/men/${slug}`}>
+            <Link to={`/women/${slug}`}>
               <img src={img} alt={name} />
               <h3>{name}</h3>
               <h4>Rs. {price}</h4>
@@ -44,45 +44,39 @@ export function LaunchIndex() {
   );
 }
 
-export function LaunchShoe() {
+export function WomenShoeDetail() {
   const { slug } = useParams();
-  const shoe = men[slug];
+  const shoe = women[slug];
 
   if (!shoe) {
     return <h2>Not Found!</h2>;
   }
 
-  const { name, img, price } = shoe;
+  const { name, img } = shoe;
 
   return (
-    <div className="detail-page">
-      <div className="img">
-        <img src={img} alt={name} />
-      </div>
-      <div className="details">
-        <h2>{name}</h2>
-        <button>Add to Cart</button>
-        <button className="fvt">Favorite</button>
-      </div>
+    <div>
+      <h2>{name}</h2>
+      <img src={img} alt={name} />
     </div>
   );
 }
 
-const men = {
-  "air-jordan-3-valor-blue1": {
-    name: "VALOUR BLUE",
+const women = {
+  "air-jordan-3-valor-blue": {
+    name: "VALOUR BLUE1",
     price: 1200,
     img:
       "https://secure-images.nike.com/is/image/DotCom/CT8532_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
   },
   "jordan-mars-270-london": {
-    name: "JORDAN MARS 270 LONDON",
+    name: "JORDAN MARS 270 LONDON1",
     price: 1200,
     img:
       "https://secure-images.nike.com/is/image/DotCom/CV3042_001_A_PREM?$SNKRS_COVER_WD$&align=0,1",
   },
   "air-jordan-1-zoom-racer-blue": {
-    name: "RACER BLUE",
+    name: "RACER BLUE1",
     price: 1200,
     img:
       "https://secure-images.nike.com/is/image/DotCom/CK6637_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
