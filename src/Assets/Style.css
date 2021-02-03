@@ -1,58 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border-collapse: collapse;
 }
-body{
+
+body {
     font-family: 'Roboto';
 }
-.header{
+
+.header {
     top: 0;
     width: 100%;
     display: block;
 }
-.navbar{
+
+.navbar {
     height: 45px;
-    border-bottom: 1px solid rgba(117,117,117, 0.4);
+    border-bottom: 1px solid rgba(117, 117, 117, 0.4);
 }
-.navbar .navitems{
+
+.navbar .navitems {
     display: inline;
 }
-.navbar .left{
+
+.navbar .left {
     float: left;
 }
-.navbar .right{
+
+.navbar .right {
     float: right;
 }
-.navbar img{
+
+.navbar img {
     height: 15px;
 }
-.navbar .left a,.navbar .right a{
+
+.navbar .left a,
+.navbar .right a {
     font-size: 14px;
     text-decoration: none;
     color: #757575;
     padding: 15px 32px;
     line-height: 42px;
 }
-.navbar .left a{
-    border-right: 1px solid rgba(117,117,117, 0.4);
+
+.navbar .left a {
+    border-right: 1px solid rgba(117, 117, 117, 0.4);
 }
-.navbar .right a{
+
+.navbar .right a {
     padding: 10px 15px;
 }
+
 .navbar a:hover {
     color: black;
 }
 
 /* Menu Bar */
-.menu-container{
-    border-bottom: 1px solid rgba(117,117,117, 0.4);
+.menu-container {
+    border-bottom: 1px solid rgba(117, 117, 117, 0.4);
     text-align: center;
 }
-.menu-container .menu ul a{
+
+.menu-container .menu ul a {
     text-align: center;
     display: inline-block;
     list-style: none;
@@ -64,34 +77,43 @@ body{
     text-transform: uppercase;
     padding: 30px 18px;
 }
-.menu-container .menu img{
+
+.menu-container .menu img {
     width: 60px;
 }
-.menu-container .menu ul a:hover{
+
+.menu-container .menu ul a:hover {
     border-bottom: 2px solid black;
     transition: 0.3s;
 }
-.menu-container .menu img:hover{
+
+.menu-container .menu img:hover {
     border-bottom: 0px solid black;
 }
+
 /*Body*/
-*{
+* {
     box-sizing: border-box;
 }
+
 .cards-list {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
 }
+
 .cards-list .card {
     flex-direction: column;
     width: 95%;
     height: 550px;
 }
-.cards-list img{
+
+.cards-list img {
     width: 100%;
 }
-.cards-list .card h3, h4 {
+
+.cards-list .card h3,
+h4 {
     display: inline-block;
     font-family: 'Roboto';
     text-decoration: none;
@@ -100,57 +122,70 @@ body{
     font-size: 18px;
     padding: 10px 0px;
 }
-.cards-list .card h4{
+
+.cards-list .card h4 {
     float: right;
     font-size: 18px;
 }
+
 /*NotFound Page*/
-.notfound-pg-wrapper{
+.notfound-pg-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.notfound-pg-wrapper img{
+.notfound-pg-wrapper img {
     margin-top: 100px;
     width: 200px;
 }
-.notfound-pg-wrapper h2{
+
+.notfound-pg-wrapper h2 {
     margin-top: 40px;
     font-size: 56px;
     font-weight: 400;
 }
-.notfound-pg-wrapper h3{
+
+.notfound-pg-wrapper h3 {
     margin-top: 30px;
 }
+
 /*Detail-Page*/
-.detail-page{
+.detail-page {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
 }
-.detail-page > .img, .details{
+
+.detail-page>.img,
+.details {
     display: inline-block;
     width: 100%;
 }
-.detail-page > .img{
+
+.detail-page>.img {
     width: 65%;
 }
-.detail-page .img > img{
-    width: 100%;
+
+.detail-page .img>img {
+    width: 48%;
+    margin: 5px;
 }
-.detail-page .details{
+
+.detail-page .details {
     display: block;
     width: 30%;
     padding: 10px;
 }
-.detail-page .details > h2{ 
+
+.detail-page .details>h2 {
     display: block;
 }
-.detail-page .details > button{ 
+
+.detail-page .details>button {
     display: block;
-    width: 260px;
+    width: 100%;
     background-color: black;
     border: none;
     color: white;
@@ -161,8 +196,23 @@ body{
     outline: none;
     cursor: pointer;
 }
-.detail-page .details > .fvt{ 
+
+.detail-page .details>.fvt {
     background-color: white;
     border: 1.5px solid black;
     color: black;
+}
+
+.details > p {
+    font-weight: 200;
+    letter-spacing: 0.5px;
+}
+
+footer {
+    width: 100%;
+    padding: 50px 80px;
+    background-color: black;
+    color: white;
+    font-weight: 100;
+    height: 200px;
 }
